@@ -1,0 +1,204 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import PhoneList from "@components/PhoneList.astro"; 
+import ContactForm from '@components/ContactForm.astro';
+import WhatsAppList from "@components/WhatsAppList.astro";
+// Importación de la imagen relacionada
+import contactoImage from "@assets/images/contactanos.webp";
+---
+
+<footer id="contacto">
+  <div class="py-12 ">
+    <div
+      class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10"
+    >
+      <!-- Columna de Imagen y Formulario de Contacto -->
+      <div class="space-y-6">
+        <!-- Imagen de Contacto -->
+        <div
+          class="transition-transform duration-300 ease-in-out transform hover:scale-105"
+        >
+          <Image
+            src={contactoImage}
+            alt="Imagen de contacto"
+            class="rounded-lg w-full h-auto"
+            width={900}
+            height={600}
+            loading="lazy"
+            data-aos="zoom-in-up"
+          />
+        </div>
+      </div>
+
+      <!-- Columna de mensaje y horarios -->
+      <div class="space-y-6" data-aos="zoom-in-up">
+        <h2 class="text-primary text-3xl font-bold leading-snug">
+          <strong class="text-accent">Contacta a un Experto</strong> Hoy Mismo
+        </h2>
+        <div class="w-[140px] h-[2px] bg-accent mb-2"></div>
+        <p class="text-xl text-primary">
+          Nuestros asesores técnicos están listos para ayudarte. Conversemos sobre tu proyecto y encontremos juntos la solución GAF ideal para proteger tu inversión.
+        </p>
+        <p class="text-xl text-primary"> <strong>Llámanos y eleva la durabilidad y el rendimiento de tu construcción</strong> con los sistemas impermeabilizantes líderes del mercado.</p>
+
+        <h3 class="text-accent text-2xl font-bold">Habla con un experto</h3>
+        <!-- Lista de Teléfonos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <WhatsAppList />
+          <PhoneList />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-12 ">
+    <div
+      class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 mt-12"
+    >
+      <div data-aos="zoom-in-up">
+        <!-- SVG del ícono de mail -->
+        <Icon
+          name="mdi:email-edit"
+          width="42"
+          height="42"
+          title="mail icon"
+          class="pr-0"
+          class="text-accent" 
+        /> 
+        <h3 class="text-primary text-3xl font-bold mb-6">
+          Envía un mensaje
+        </h3>
+        <!-- Formulario de Contacto -->
+        <ContactForm />
+      </div>
+      <div data-aos="zoom-in-up">
+        <!-- SVG del ícono de reloj -->
+        <Icon
+          name="mdi:clock-time-two"
+          width="42"
+          height="42"
+          title="clock icon"
+          class="text-accent"     
+        />
+        <h3 class="font-bold text-primary text-3xl mb-6">
+          Horario de atención
+        </h3>
+        <p class="text-lg text-default">
+          Lunes a Viernes de 10am a 6pm. <br />Sábado de 10am a 2pm.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<a
+  href="https://wa.me/5213310793173?text=Hola,%20visite%20www.impermeabilizantesgaf.com%20y%20me%20interesa%20recibir%20más%20información"
+  class="btn-whatsapp-pulse btn-whatsapp-pulse-border"
+  target="_blank"
+  rel="nofollow"
+  aria-label="Contacto vía WhatsApp"
+>
+  <!--?xml version="1.0" encoding="UTF-8"?-->
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="50px"
+    height="50px"
+    viewBox="0 0 50 50"
+    version="1.1"
+  >
+    <g id="surface1">
+      <path
+        style="stroke:none;fill-rule:nonzero;fill:rgb(49.803922%,82.745098%,44.313725%);fill-opacity:1;"
+        d="M 25.007812 0 L 24.992188 0 C 11.210938 0 0 11.210938 0 25 C 0 30.464844 1.765625 35.535156 4.761719 39.652344 L 1.648438 48.941406 L 11.253906 45.871094 C 15.207031 48.484375 19.925781 50 25.007812 50 C 38.789062 50 50 38.785156 50 25 C 50 11.214844 38.789062 0 25.007812 0 Z M 39.554688 35.300781 C 38.953125 37.007812 36.554688 38.417969 34.648438 38.832031 C 33.339844 39.109375 31.632812 39.328125 25.890625 36.949219 C 18.542969 33.90625 13.8125 26.441406 13.445312 25.953125 C 13.089844 25.46875 10.476562 22 10.476562 18.414062 C 10.476562 14.828125 12.296875 13.078125 13.03125 12.328125 C 13.636719 11.710938 14.632812 11.433594 15.589844 11.433594 C 15.898438 11.433594 16.175781 11.449219 16.425781 11.460938 C 17.160156 11.492188 17.527344 11.539062 18.015625 12.699219 L 20.261719 18.105469 C 20.4375 18.472656 20.617188 18.972656 20.363281 19.457031 C 20.128906 19.957031 19.925781 20.179688 19.558594 20.605469 C 19.1875 21.03125 18.835938 21.355469 18.46875 21.808594 C 18.132812 22.207031 17.75 22.632812 18.175781 23.367188 C 18.601562 24.089844 20.070312 26.484375 22.230469 28.40625 C 25.023438 30.890625 27.285156 31.6875 28.09375 32.023438 C 28.695312 32.273438 29.417969 32.214844 29.855469 31.746094 C 30.414062 31.140625 31.105469 30.144531 31.8125 29.160156 C 32.308594 28.453125 32.941406 28.363281 33.601562 28.613281 C 34.28125 28.847656 37.851562 30.613281 38.585938 30.980469 C 39.320312 31.347656 39.804688 31.523438 39.980469 31.832031 C 40.15625 32.144531 40.15625 33.597656 39.554688 35.300781 Z M 39.554688 35.300781 "
+      ></path>
+      <path
+        style=" stroke:none;fill-rule:nonzero;fill:rgb(42.745098%,73.72549%,38.039216%);fill-opacity:1;"
+        d="M 0 25 C 0 30.464844 1.765625 35.535156 4.761719 39.652344 L 1.648438 48.941406 L 11.253906 45.871094 C 15.207031 48.484375 19.925781 50 25.007812 50 C 38.789062 50 50 38.785156 50 25 C 50 11.214844 38.789062 0 25.007812 0 L 24.992188 0 M 39.554688 35.300781 C 38.953125 37.007812 36.554688 38.417969 34.648438 38.832031 C 33.339844 39.109375 31.632812 39.328125 25.890625 36.949219 C 18.542969 33.90625 13.8125 26.441406 13.445312 25.953125 C 13.089844 25.46875 10.476562 22 10.476562 18.414062 C 10.476562 14.828125 12.296875 13.078125 13.03125 12.328125 C 13.636719 11.710938 14.632812 11.433594 15.589844 11.433594 C 15.898438 11.433594 16.175781 11.449219 16.425781 11.460938 C 17.160156 11.492188 17.527344 11.539062 18.015625 12.699219 L 20.261719 18.105469 C 20.4375 18.472656 20.617188 18.972656 20.363281 19.457031 C 20.128906 19.957031 19.925781 20.179688 19.558594 20.605469 C 19.1875 21.03125 18.835938 21.355469 18.46875 21.808594 C 18.132812 22.207031 17.75 22.632812 18.175781 23.367188 C 18.601562 24.089844 20.070312 26.484375 22.230469 28.40625 C 25.023438 30.890625 27.285156 31.6875 28.09375 32.023438 C 28.695312 32.273438 29.417969 32.214844 29.855469 31.746094 C 30.414062 31.140625 31.105469 30.144531 31.8125 29.160156 C 32.308594 28.453125 32.941406 28.363281 33.601562 28.613281 C 34.28125 28.847656 37.851562 30.613281 38.585938 30.980469 C 39.320312 31.347656 39.804688 31.523438 39.980469 31.832031 C 40.15625 32.144531 40.15625 33.597656 39.554688 35.300781 Z M 39.554688 35.300781 "
+      ></path>
+      <path
+        style=" stroke:none;fill-rule:nonzero;fill:rgb(32.941176%,60.784314%,27.058824%);fill-opacity:1;"
+        d="M 33 1.320312 C 39.375 6.769531 43.535156 15.097656 43.535156 22.148438 C 43.535156 26.03125 42.269531 29.667969 40.074219 32.789062 C 40.042969 33.433594 39.902344 34.320312 39.550781 35.300781 C 38.953125 37.007812 36.554688 38.417969 34.644531 38.832031 C 34.292969 38.90625 33.90625 38.976562 33.421875 38.992188 C 29.238281 41.597656 24.054688 43.144531 18.4375 43.144531 C 13.378906 43.144531 8.671875 41.886719 4.730469 39.734375 L 1.648438 48.941406 L 11.253906 45.871094 C 15.207031 48.484375 19.925781 50 25.007812 50 C 38.789062 50 50 38.785156 50 25 C 50 14.007812 42.871094 4.660156 33 1.320312 Z M 33.601562 28.613281 C 33.769531 28.671875 34.113281 28.824219 34.542969 29.023438 L 17.839844 12.316406 C 17.902344 12.441406 17.960938 12.570312 18.015625 12.699219 L 20.261719 18.105469 C 20.4375 18.472656 20.617188 18.972656 20.363281 19.457031 C 20.128906 19.957031 19.925781 20.179688 19.558594 20.605469 C 19.1875 21.03125 18.835938 21.355469 18.46875 21.808594 C 18.132812 22.207031 17.75 22.632812 18.175781 23.367188 C 18.601562 24.089844 20.070312 26.484375 22.230469 28.410156 C 25.023438 30.894531 27.285156 31.6875 28.09375 32.023438 C 28.695312 32.277344 29.417969 32.214844 29.855469 31.746094 C 30.414062 31.144531 31.105469 30.144531 31.8125 29.160156 C 32.308594 28.453125 32.941406 28.367188 33.601562 28.613281 Z M 33.601562 28.613281 "
+      ></path>
+      <path
+        style=" stroke:none;fill-rule:nonzero;fill:rgb(36.078431%,66.666667%,30.980392%);fill-opacity:1;"
+        d="M 10.476562 18.4375 L 10.3125 18.601562 L 10.492188 18.78125 Z M 10.476562 18.4375 "
+      ></path>
+    </g>
+  </svg>
+</a>
+
+<style>
+  .btn-whatsapp-pulse {
+    z-index: 999;
+    background: #ffffff;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    padding: 2px;
+    text-decoration: none;
+    border-radius: 50%;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    width: 55px;
+    height: 55px;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    80% {
+      box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
+  }
+
+  .btn-whatsapp-pulse-border {
+    bottom: 40px;
+    right: 20px;
+    animation-play-state: paused;
+  }
+
+  a.btn-whatsapp-pulse-border:hover {
+    color: #fff !important;
+  }
+
+  .btn-whatsapp-pulse-border::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    padding: 25px;
+    border: 5px solid #25d366;
+    opacity: 0.75;
+    animation-name: pulse-border;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse-border {
+    0% {
+      padding: 25px;
+      opacity: 0.75;
+    }
+
+    75% {
+      padding: 50px;
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+</style>

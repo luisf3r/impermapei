@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+
+// Importación de la imagen descriptiva de la empresa
+import sistemaImage from "@assets/images/impermeabilizantes-asfalticos-gaf.webp";
+---
+
+
+<section class="py-12" id="asfalticos">
+  <div class="mx-4">
+    <div
+      class="max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-[5px] items-center py-4 lg:py-12  bg-white rounded-md mx-auto shadow-lg hover:shadow-xl transition-shadow duration-300"
+    >
+      <!-- Imagen descriptiva de la empresa -->
+      <div class="w-full lg:w-1/2">
+        <Image
+          src={sistemaImage}
+          alt="Impermeabilizantes Asfálticos GAF"
+          class="rounded-lg w-full h-auto"
+          width={547}
+          height={410}
+          loading="lazy"
+          data-aos="fade-right"
+        />
+      </div>
+
+      <!-- Bloque de descripción -->
+      <div class="w-full lg:w-1/2 py-4 lg:p-6">
+        <h2
+          class="text-primary text-2xl md:text-3xl font-bold mb-2 leading-snug"
+          data-aos="fade-right"
+        >
+          Impermeabilizantes <strong class="text-accent">Asfálticos</strong> GAF
+        </h2>
+        <div class="w-[140px] h-[2px] bg-accent mb-6"></div>
+        <p class="text-gray-700 text-lg leading-relaxed" data-aos="fade-right">
+          Ofrecen un rendimiento excepcional a un precio rentable. Su
+          flexibilidad inherente, resistencia a los hongos y eficiencia
+          energética las convierten en la opción más popular del mercado.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="" id="">
+  <div class="mx-4"><h3 class="text-white text-center text-3xl" data-aos="fade-right">Impermeabilizantes <strong>Asfálticos</strong> destacados</h3></div>
+</section>

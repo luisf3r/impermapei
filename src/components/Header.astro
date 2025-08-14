@@ -1,0 +1,265 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import myLogoImage from "@assets/images/logo-ccs-azul.svg";
+---
+
+<header class="bg-white sticky top-0 z-50 duration-300 h-20 md:h-24 lg:h-36 shadow-md">
+  <nav
+    class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center py-3"
+  >
+    <!-- Botón del menú de hamburguesa (visible solo en móviles) -->
+    <button class="lg:hidden" id="menu-toggle" aria-label="Abrir menú">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="#C30B21"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Logo (Centrado en móviles) -->
+    <div class="flex-1 text-center lg:text-left">
+      <a href="/" class="inline-block">
+        <Image
+          src={myLogoImage}
+          alt="Logo Impermeabilizantes GAF"
+          width={myLogoImage.width / 2}
+          densities={[176, 142]}
+          class="aspect-[75/22] header-logo w-44 md:w-52 lg:w-64 object-contain transition-all duration-300"
+          loading="eager"
+        />
+      </a>
+    </div>
+
+    <!-- Icono de teléfono (Visible solo en móviles) -->
+    <div class="lg:hidden">
+      <a
+        href="tel:3310793173"
+        class="text-accent hover:text-accent transition"
+        aria-label="Llamar al número 3310793173"
+      >
+        <span class="sr-only">Llamar al número 33-1079-3173</span>
+        <svg
+          width="30px"
+          height="30px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.05 6C15.0268 6.19057 15.9244 6.66826 16.6281 7.37194C17.3318 8.07561 17.8095 8.97326 18 9.95M14.05 2C16.0793 2.22544 17.9716 3.13417 19.4163 4.57701C20.8609 6.01984 21.7721 7.91101 22 9.94M18.5 21C9.93959 21 3 14.0604 3 5.5C3 5.11378 3.01413 4.73086 3.04189 4.35173C3.07375 3.91662 3.08968 3.69907 3.2037 3.50103C3.29814 3.33701 3.4655 3.18146 3.63598 3.09925C3.84181 3 4.08188 3 4.56201 3H7.37932C7.78308 3 7.98496 3 8.15802 3.06645C8.31089 3.12515 8.44701 3.22049 8.55442 3.3441C8.67601 3.48403 8.745 3.67376 8.88299 4.05321L10.0491 7.26005C10.2096 7.70153 10.2899 7.92227 10.2763 8.1317C10.2643 8.31637 10.2012 8.49408 10.0942 8.64506C9.97286 8.81628 9.77145 8.93713 9.36863 9.17882L8 10C9.2019 12.6489 11.3501 14.7999 14 16L14.8212 14.6314C15.0629 14.2285 15.1837 14.0271 15.3549 13.9058C15.5059 13.7988 15.6836 13.7357 15.8683 13.7237C16.0777 13.7101 16.2985 13.7904 16.74 13.9509L19.9468 15.117C20.3262 15.255 20.516 15.324 20.6559 15.4456C20.7795 15.553 20.8749 15.6891 20.9335 15.842C21 16.015 21 16.2169 21 16.6207V19.438C21 19.9181 21 20.1582 20.9007 20.364C20.8185 20.5345 20.663 20.7019 20.499 20.7963C20.3009 20.9103 20.0834 20.9262 19.6483 20.9581C19.2691 20.9859 18.8862 21 18.5 21Z"
+            stroke="#CC0512"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div>
+      <div
+        class="hidden lg:flex mt-3 mb-5  items-center justify-evenly text-lg font-bold"
+      >
+        <h3 class="title text-accent">ASESORÍA PROFESIONAL</h3>
+        <p class="tel flex items-center text-primary">
+          <a
+            href="https://wa.me/5213310793173?text=Hola,%20me%20interesa%20recibir%20información%20sobre%20los%20productos%20GAF"
+            target="_blank"
+            class="flex items-center space-x-2 hover:text-accent transition-all duration-300"
+          >
+            <!-- SVG del ícono de WhatsApp con animación de escala en hover -->
+            <Icon
+              name="whatsapp"
+              width="32"
+              height="25"
+              title="whatsapp icon"
+              class="pr-2 transition-transform duration-300"
+            /> 
+            33-1079-3173
+          </a>
+        </p>
+        <p class="tel flex items-center">
+          <a
+            href="tel:8008909363"
+            target="_blank"
+            rel="nofollow noopener"
+            class="flex items-center space-x-2 text-primary hover:text-accent  transition-all duration-300"
+          >
+            <!-- SVG del ícono de teléfono con animación de escala en hover -->
+            <Icon
+              name="mdi:phone-dial"
+              width="33"
+              height="25"
+              title="phone icon"
+              class="pr-2 transition-transform duration-300"
+            /> 
+            (800) 8909-363
+          </a>
+        </p>
+      </div>
+      <!-- Menú de navegación (visible en pantallas más grandes, oculto en móviles) -->
+      <div class="hidden lg:flex space-x-2 lg:gap-x-4 items-center mt-8 text-primary">
+        <a href="/" class="hover:text-accent text-base font-bold transition duration-200 relative group">
+          INICIO
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <span class="dividerline">/</span>
+        <a href="/#beneficios" class="hover:text-accent text-base font-bold transition duration-200 relative group">
+          BENEFICIOS
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <span class="dividerline">/</span>
+        <a href="/#productos" class="hover:text-accent text-base font-bold transition duration-200 relative group">
+          PRODUCTOS
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <span class="dividerline">/</span>
+        <a href="/#proyectos" class="hover:text-accent text-base font-bold transition duration-200 relative group">
+          PROYECTOS
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <span class="dividerline">/</span>
+        <a href="/#nosotros" class="hover:text-accent text-base font-bold transition duration-200 relative group">
+          NOSOTROS
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <span class="dividerline">/</span>
+        <a
+          href="/#contacto"
+          class="hover:text-accent text-base font-bold transition duration-200 relative group"
+          >CONTACTO</a
+        >
+      </div>
+      
+    </div>
+
+    <!-- Panel del menú de hamburguesa (oculto por defecto) -->
+    <div
+  class="lg:hidden absolute left-0 top-full w-full bg-[#343642]  shadow-lg z-10 hidden transition-opacity duration-300 pb-6"
+  id="mobile-menu"
+>
+  <div class="px-4 py-3 my-3 text-center">
+    <a
+      href="/"
+      class="menu-item block text-lg font-bold text-white py-3 mb-2 transition-all duration-300"
+    >
+      INICIO
+    </a>
+
+    <a
+      href="/#beneficios"
+      class="menu-item block text-lg font-bold text-white py-3 mb-2 transition-all duration-300"
+    >
+      BENEFICIOS
+    </a>
+
+    <a
+      href="/#productos"
+      class="menu-item block text-lg font-bold text-white py-3 mb-2 transition-all duration-300"
+    >
+      PRODUCTOS
+    </a>
+
+    <a
+      href="/#proyectos"
+      class="menu-item block text-lg font-bold text-white py-3 mb-2 transition-all duration-300"
+    >
+      PROYECTOS
+    </a>
+
+    <a
+      href="/#nosotros"
+      class="menu-item block text-lg font-bold text-white py-3 mb-2 transition-all duration-300"
+    >
+      NOSOTROS
+    </a>
+
+    <a
+      href="/#contacto"
+      class="inline-block bg-[#D42A35] hover:bg-[#CC0512] text-white hover:text-whitefont-bold py-2 px-4 rounded-lg transition-colors duration-150"
+    >
+      CONTACTO
+    </a>
+  </div>
+</div>
+
+  </nav>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (): void => {
+    const menuToggle: HTMLElement | null =
+      document.getElementById("menu-toggle");
+    const mobileMenu: HTMLElement | null =
+      document.getElementById("mobile-menu");
+
+    // Asegúrate de que estás utilizando el tipo correcto para el evento de clic si estás utilizando TypeScript
+    menuToggle?.addEventListener("click", () => {
+      mobileMenu?.classList.toggle("hidden");
+    });
+
+    // Añade lógica similar a la anterior para cerrar el menú al hacer clic en un enlace
+    const menuLinks: NodeListOf<HTMLElement> =
+      document.querySelectorAll("#mobile-menu a");
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu?.classList.add("hidden");
+      });
+    });
+  });
+
+  // TypeScript es estricto con el acceso a elementos del DOM, así que usamos aserciones de tipo
+  const header = document.querySelector("header") as HTMLElement;
+  const logo = document.querySelector(".header-logo") as HTMLImageElement;
+
+  window.addEventListener("scroll", () => {
+    // Verifica si el header y el logo existen antes de intentar manipularlos
+    if (header && logo) {
+      if (window.scrollY > 200) {
+        // Aplica la clase para reducir el tamaño
+        header.classList.add("smaller-header");
+        logo.classList.add("smaller-logo");
+      } else {
+        // Remueve la clase para volver al tamaño original
+        header.classList.remove("smaller-header");
+        logo.classList.remove("smaller-logo");
+      }
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", (): void => {
+    const adjustScrollForHeader = (): void => {
+      const header: HTMLElement | null =
+        document.querySelector<HTMLElement>("header");
+      const headerHeight: number = header ? header.offsetHeight : 0;
+
+      if (window.location.hash) {
+        const targetElement: HTMLElement | null =
+          document.querySelector<HTMLElement>(window.location.hash);
+
+        if (targetElement) {
+          // Calcula y ajusta la posición de desplazamiento para evitar que el encabezado cubra el contenido.
+          const targetPosition: number = targetElement.offsetTop - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        }
+      }
+    };
+
+    // Ajusta el desplazamiento en la carga de la página si hay un hash en la URL
+    adjustScrollForHeader();
+
+    // Opcional: Vuelve a aplicar el ajuste si hay un cambio en la URL que incluye un hash (útil en SPAs)
+    window.addEventListener("hashchange", adjustScrollForHeader, false);
+  });
+</script>

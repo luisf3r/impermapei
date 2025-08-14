@@ -1,0 +1,117 @@
+---
+import { SEO } from 'astro-seo';
+
+interface Props {
+  title: string;
+  description: string;
+  ogtype: string;
+  ogimage: string;
+  noindex?: boolean;
+}
+
+const { title, description, ogtype, ogimage, noindex } = Astro.props;
+
+
+import Header from '@components/Header.astro';
+
+// Supports weights 100-900
+import '@fontsource-variable/public-sans';
+
+// Supports weights 300-800
+import '@fontsource-variable/open-sans';
+
+import '@styles/global.scss';
+
+---
+
+<!doctype html>
+<html lang="es-MX">
+	<head>
+	<!-- Google Tag Manager -->
+	 
+	<!-- End Google Tag Manager -->
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+
+		<SEO
+			title={title}
+			description={description}
+			noindex={noindex}
+			openGraph={{
+				basic: {
+				title: title,
+				type: ogtype, // Asegúrate de que el tipo sea adecuado para tu contenido
+				image: ogimage, // URL absoluta a la imagen
+				url: Astro.url, // URL de tu página
+				},
+			}}
+			twitter={{
+				card: "summary_large_image",
+				site: "", // Tu username de Twitter si tienes uno
+				creator: "",
+				title: title,
+				image: ogimage, // Opcionalmente, una imagen específica para Twitter
+				description: description,
+			}}
+			extend={{
+				// extending the default meta tags
+				meta: [
+				],
+			}}
+			/>
+	</head>
+	<body class="antialiased">
+		<!-- Google Tag Manager (noscript) -->
+		<!-- End Google Tag Manager (noscript) -->
+		<Header />
+		<slot />
+		<script src="@js/main.ts"></script>
+	</body>
+</html>
+
+<style is:global>
+  img {
+	content-visibility: auto;
+  }
+
+  html {
+	background: #fcfcfc;
+  }
+
+  body {
+	overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+	font-family: 'Public Sans Variable', sans-serif;
+    font-weight: 700;
+    line-height: 1.5em;
+    }
+      
+  body,
+    h4,
+    h5,
+    h6,
+    p {
+		font-family: 'Open Sans Variable', sans-serif;
+		font-weight: 400;
+    }
+
+	.bg-primary .text-adjust {
+		@apply text-white;
+	}
+
+	.bg-backgroundDark .text-adjust {
+		@apply text-white;
+	}
+
+    .grecaptcha-badge { 
+        visibility: hidden !important;
+    }
+</style>

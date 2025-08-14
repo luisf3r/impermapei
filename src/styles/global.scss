@@ -1,0 +1,25 @@
+/* Añádelo en el archivo de Tailwind si usas Tailwind con configuraciones adicionales, o en un archivo CSS */
+.menu-item {
+  position: relative;
+  color: #ffffff; /* color del texto inicial */
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0078C1; /* color del subrayado */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.menu-item:hover::before {
+  width: 100%;
+}
+
+.menu-item:hover {
+  color: #0078C1; /* color del texto al pasar el cursor */
+}

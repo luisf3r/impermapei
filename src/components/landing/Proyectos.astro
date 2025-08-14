@@ -1,0 +1,91 @@
+---
+import { Image } from "astro:assets";
+
+// Importación de imágenes locales para cada proyecto
+
+import casoImage from "@assets/images/proyectos/proyecto-kia-forum.webp";
+import casoImage2 from "@assets/images/proyectos/saputo-usa.webp";
+---
+
+<section class="py-12 px-4" id="proyectos">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center" data-aos="zoom-in-up">
+      <h2 class="text-primary text-center text-3xl font-bold mb-2 leading-snug">
+        <strong class="text-accent">Proyectos de Éxito</strong> con Tecnología GAF
+      </h2>
+      <div class="w-[140px] h-[2px] bg-accent mx-auto mb-8"></div>
+      <p class="text-center text-gray-700 text-xl mb-12">
+        Descubre cómo las soluciones GAF han resuelto los desafíos de
+        impermeabilización en proyectos emblemáticos.
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-[35px] items-center py-4 md:py-12 bg-white rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300"
+  >
+    <!-- Imagen descriptiva de la empresa -->
+    <div class="w-full md:w-1/2">
+      <Image
+        src={casoImage}
+        alt="Caso de exito GAF"
+        class="rounded-lg w-full h-auto"
+        width={600}
+        height={400}
+        loading="lazy"
+        data-aos="zoom-in-up"
+      />
+    </div>
+
+    <!-- Bloque de descripción -->
+    <div class="w-full md:w-1/2 p-2 md:p-6">
+      <h2
+        class="text-primary text-2xl md:text-3xl font-bold mb-2 leading-snug"
+        data-aos="zoom-in-up"
+      >
+        Kia Forum, California
+      </h2>
+      <div class="w-[140px] h-[2px] bg-accent mb-2 md:mb-6"></div>
+      <p class="text-gray-700 text-lg leading-relaxed" data-aos="zoom-in-up">
+        Los revestimientos de techo GAF se aplicaron en esta legendaria sede de
+        eventos de más de 12,500 m², garantizando la protección de su estructura
+        y su icónico logotipo.
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-[35px] items-center mt-12 py-4 md:py-12 bg-white rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300"
+  >
+    <!-- Imagen descriptiva de la empresa -->
+    <div class="w-full md:w-1/2">
+      <Image
+        src={casoImage2}
+        alt="Caso de exito #2 GAF"
+        class="rounded-lg w-full h-auto"
+        width={600}
+        height={400}
+        loading="lazy"
+        data-aos="zoom-in-up"
+      />
+    </div>
+
+    <!-- Bloque de descripción -->
+    <div class="w-full md:w-1/2 p-2 md:p-6">
+      <h2
+        class="text-primary text-2xl md:text-3xl font-bold mb-2 leading-snug"
+        data-aos="zoom-in-up"
+      >
+        Planta Saputo Cheese USA
+      </h2>
+      <div class="w-[140px] h-[2px] bg-accent mb-6"></div>
+      <p class="text-gray-700 text-lg leading-relaxed" data-aos="zoom-in-up">
+        Para proteger una instalación de Saputo Cheese con equipo electrónico
+        sensible del frío extremo de Wisconsin, se instaló un sistema GAF para
+        almacenamiento en frío. La solución incluyó una innovadora barrera de
+        vapor y una membrana TPO para controlar la condensación y las
+        fluctuaciones de temperatura.
+      </p>
+    </div>
+  </div>
+</section>

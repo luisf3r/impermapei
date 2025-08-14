@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon/components";
+
+// Información de los beneficios
+const beneficios = [
+  {
+    icon: "mdi:weather-lightning-rainy", // Cambia el ícono según sea necesario
+    title: "Durabilidad Comprobada",
+    description: "Con sistemas probados en campo durante décadas, los productos GAF superan los estándares de la industria, garantizando un rendimiento a largo plazo incluso en las condiciones más extremas."
+  },
+  {
+    icon: "mdi:wind-energy", // Cambia el ícono según sea necesario
+    title: "Eficiencia Energética",
+    description: "Las superficies blancas y altamente reflectantes de nuestras membranas y recubrimientos pueden reducir significativamente los costos de energía al disminuir el efecto de isla de calor."
+  },
+  {
+    icon: "material-symbols:wb-sunny-rounded", // Cambia el ícono según sea necesario
+    title: "Máxima Resistencia",
+    description: "Nuestros sistemas ofrecen una protección superior contra el calor, los rayos UV, los hongos, el granizo y la exposición a químicos, asegurando la integridad de tu estructura."
+  },
+  {
+    icon: "mdi:home-roof", // Cambia el ícono según sea necesario
+    title: "Versatilidad y Flexibilidad",
+    description: "No importa la complejidad de tu techo, GAF tiene una solución. Nuestros productos son ideales para techos metálicos, de concreto, asfálticos y más, adaptándose a contornos y curvas con facilidad."
+  },
+  {
+    icon: "mdi:shield-check-outline", // Cambia el ícono según sea necesario
+    title: "Líder en la Industria",
+    description: "Confía en el fabricante de techos más grande de Norteamérica. GAF no se limita a una sola tecnología, ofreciendo una amplia variedad de productos para cada necesidad específica."
+  }
+];
+---
+
+<section class="py-12" id="beneficios">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[35px]">
+      {beneficios.map((beneficio) => (
+        <div class="bg-white rounded-lg shadow-md p-6 transition-transform duration-300 ease-in-out transform hover:shadow-lg hover:scale-105 hover:bg-white hover:text-primary"  data-aos="zoom-in-up">
+          <!-- Ícono del beneficio -->
+          <Icon name={beneficio.icon} class="text-accent text-6xl font-bold mb-4" />
+
+          <!-- Título del beneficio -->
+          <h3 class="text-primary text-xl font-bold mb-2">{beneficio.title}</h3>
+
+          <!-- Descripción del beneficio -->
+          <p class="text-gray-700 text-lg">
+            {beneficio.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

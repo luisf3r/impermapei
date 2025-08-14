@@ -1,0 +1,68 @@
+---
+// ContactForm.astro
+---
+
+<form
+  action="https://usebasin.com/f/e58a7bf80a47"
+  method="POST"
+  enctype="multipart/form-data"
+  class="space-y-4"
+  id="contact-form"
+  data-basin-form
+  data-basin-success-action="redirect"
+>
+  <input
+    type="text"
+    name="nombre"
+    id="nombre"
+    placeholder="Tu nombre"
+    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-support"
+    required
+  />
+  <input
+    type="email"
+    name="email"
+    id="email"
+    placeholder="Email"
+    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-support"
+    required
+  />
+  <input
+    type="tel"
+    name="telefono"
+    id="telefono"
+    placeholder="Teléfono"
+    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-support"
+    required
+  />
+  <textarea
+    placeholder="Mensaje"
+    name="mensaje"
+    id="mensaje"
+    rows="4"
+    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-support"
+    required></textarea>
+
+  <input type="hidden" name="_compania" />
+  <input type="hidden" name="website" id="website" />
+
+  <button
+    type="submit"
+    class="w-full bg-button text-white font-bold py-2 px-4 rounded-md hover:bg-buttonHover transition-colors"
+  >
+    ENVIAR MENSAJE
+  </button>
+</form>
+
+
+<script>
+    // Usar TypeScript para establecer la información del sitio web
+    const websiteElement = document.getElementById(
+      "website"
+    ) as HTMLInputElement;
+    if (websiteElement) {
+      const siteUrl = window.location.origin;
+      websiteElement.value = `Este mensaje fue recibido desde el sitio web ${siteUrl}`;
+    }
+    
+</script>

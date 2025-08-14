@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+// Importación de la imagen descriptiva de la empresa
+import sistemaImage from "@assets/images/proyectos-de-impermeabilizantes-mapei-en-mexico.webp";
+---
+
+<section class="pt-12 md:py-12" id="proteccion">
+  <div
+    class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-[12px] md:gap-[35px] items-center"
+  >
+    <!-- Imagen descriptiva de la empresa -->
+    <div class="w-full md:w-1/2 pb-4 md:pb-0">
+      <Image
+        src={sistemaImage}
+        alt="Ventajas de los Impermeabilizantes Mapei"
+        class="rounded-lg w-full h-auto"
+        width={sistemaImage.width}
+        height={sistemaImage.height}
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px",
+        densities={[1, 1.5, 2]}
+        loading="lazy"
+        data-aos="zoom-in-up"
+      />
+    </div>
+
+    <!-- Bloque de descripción -->
+    <div class="w-full md:w-1/2 bg-white rounded-md p-6">
+      <h2
+        class="text-primary text-2xl md:text-3xl font-bold mb-2 leading-snug"
+        data-aos="zoom-in-up"
+      >
+        ¿Por Qué Elegir los Impermeabilizantes Mapei?
+      </h2>
+      <div class="w-[140px] h-[2px] bg-accent mb-6"></div>
+      <p class="text-gray-700 text-lg leading-relaxed" data-aos="zoom-in-up">
+        Mapei trae a México <strong>más de 80 años de liderazgo global</strong> en materiales
+        para la construcción. Con <strong>producción local</strong> y un profundo entendimiento
+        de la <strong>diversidad climática del país</strong>, ofrecemos soluciones de
+        <strong>impermeabilización de alta tecnología</strong> diseñadas para garantizar la
+        <strong>máxima durabilidad y protección</strong> para cada proyecto.
+      </p>
+    </div>
+  </div>
+</section>

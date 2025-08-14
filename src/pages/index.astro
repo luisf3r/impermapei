@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from "@components/landing/Hero.astro";
+import Proteccion from '@components/landing/Proteccion.astro';
+import ProductsByBrand from '@components/landing/ProductsByBrand.astro';
+import Proyectos from '@components/landing/Proyectos.astro';
+import Nosotros from '@components/landing/Nosotros.astro';
+import Footer from '@components/Footer.astro';
+import Tpo from '@components/landing/Tpo.astro';
+import FooterBottom from "@components/FooterBottom.astro";
+import Instalacion from "@components/landing/Instalacion.astro";
+import Beneficios from "@components/landing/Beneficios.astro";
+import Pvc from '@components/landing/Pvc.astro';
+import Liquidos from '@components/landing/Liquidos.astro';
+import Acrilicos from '@components/landing/Acrilicos.astro';
+import Asfalticos from '@components/landing/Asfalticos.astro';
+---
+
+<Layout
+  title="Impermeabilizantes GAF en México | Asesoría Profesional" 
+  description="Distribuidor líder de impermeabilizantes GAF en México. Ofrecemos soluciones de alto desempeño para techos, pisos y estacionamientos. ¡Pide tu asesoría GRATIS!"
+  ogtype="website"
+  ogimage="https://www.impergaf.w365.uno/images/impermeabilizantes-gaf-mexico-og.webp"
+  noindex={false}
+>
+  <slot />
+  <div class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat">
+    <Hero />
+  </div>
+  
+  <div class="bg-gradient-to-r from-[#9BAFD9] to-[#103783]">
+    <div id="beneficios"></div>
+    <Proteccion />
+    <Beneficios />
+  </div>  
+
+  <div class="bg-gradient-to-r from-[#EBF4F5] to-[#B5C6E0]">
+    <Instalacion />
+  </div>
+
+  <div id="productos"></div>
+  <div class="bg-[#747677] bg-cover bg-center bg-no-repeat">
+    <Tpo />
+    <ProductsByBrand categoria="Impermeabilizantes TPO" bgColor="" />
+  </div>
+
+  <div class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat">
+    <Pvc />
+  <ProductsByBrand categoria="Impermeabilizantes PVC" bgColor="" />
+  </div>
+
+  <div class="bg-[#033441] bg-cover bg-center bg-no-repeat">
+    <Liquidos />
+    <ProductsByBrand categoria="Silicón" bgColor="" />
+  </div>
+
+  <div class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat">
+    <Acrilicos /> 
+    <ProductsByBrand categoria="Acrílicos" bgColor="" />
+  </div>
+
+  <div class="bg-[#343642] bg-cover bg-center bg-no-repeat">
+    <Asfalticos />
+    <ProductsByBrand categoria="Asfálticos" bgColor="" />
+  </div>
+
+
+  <div class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat">
+    <Proyectos />
+  </div>
+
+
+  
+  <div class="bg-[url('/src/assets/images/fondos/fondo-rojo.webp')] bg-cover bg-center bg-no-repeat">
+    <Nosotros />
+  </div> 
+
+
+
+  <div class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat">
+    <Footer />
+  </div>
+
+  <FooterBottom />
+  
+</Layout>

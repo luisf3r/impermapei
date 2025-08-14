@@ -1,0 +1,70 @@
+---
+import { getCollection } from "astro:content";
+
+// Define las props que acepta el componente
+interface Props {
+  categoria: string; // Marca para filtrar los productos
+  bgColor: string; // Clase de fondo para la sección
+}
+
+// Obtén las props pasadas al componente
+const { categoria, bgColor }: Props = Astro.props;
+
+// Obtén todos los productos desde la colección "productos"
+const allProductos = await getCollection("productos");
+
+// Filtra los productos por la categoría proporcionada (incluye soporte para múltiples categorías)
+const productosFiltrados = allProductos.filter((producto) => {
+  // Si la categoría del producto es una cadena simple
+  if (typeof producto.data.categoria === 'string') {
+    // Si contiene comas, es una lista de categorías
+    if (producto.data.categoria.includes(',')) {
+      // Dividir en un array de categorías y verificar si incluye la categoría solicitada
+      const categorias = producto.data.categoria.split(',').map(cat => cat.trim());
+      return categorias.includes(categoria);
+    } else {
+      // Si no tiene comas, comparar directamente
+      return producto.data.categoria === categoria;
+    }
+  }
+  return false;
+});
+---
+
+<section class={`py-12 ${bgColor} `} id={categoria}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-[35px]">
+      {productosFiltrados.map((producto) => (
+        <a 
+          class="bg-white rounded-lg border border-gray-300 p-6 transition-transform duration-300 ease-in-out transform hover:shadow-lg hover:bg-white flex flex-col gap-4 h-full" 
+          data-aos="zoom-in-up"
+        >
+          <!-- Primera fila: Imagen y título -->
+          <div class="flex flex-col md:flex-row gap-4 items-center">
+
+            <!-- Imagen del producto -->
+            <img
+              src={typeof producto.data.exampleImage === 'string' ? producto.data.exampleImage : producto.data.exampleImage.src}
+              alt={`Imagen de ${producto.data.name}`}
+              width={540}
+              height={540}
+              class="rounded-lg w-full md:w-1/3 h-auto max-w-80"
+              loading="lazy"
+            />
+
+            <!-- Título del producto -->
+            <h3 class="text-persianRed text-2xl font-bold text-left md:flex-1">{producto.data.name}</h3>
+          </div>
+
+          <!-- Segunda fila: Descripción y botón -->
+          <div class="flex flex-col flex-grow">
+            <!-- Usos y Ventajas -->
+            <p class="text-gray-700 text-lg mb-0">
+              {producto.data.excerpt}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
