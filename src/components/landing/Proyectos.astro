@@ -3,8 +3,8 @@ import { Image } from "astro:assets";
 
 // Importación de imágenes locales para cada proyecto
 
-import casoImage from "@assets/images/proyectos/proyecto-kia-forum.webp";
-import casoImage2 from "@assets/images/proyectos/saputo-usa.webp";
+import casoImage from "@assets/images/proyectos-de-impermeabilizantes-mapei-en-mexico.webp";
+import casoImage2 from "@assets/images/centro-cultural-manuel-gomez-morin-.webp";
 ---
 
 <section class="py-12 px-4" id="proyectos">
@@ -28,10 +28,13 @@ import casoImage2 from "@assets/images/proyectos/saputo-usa.webp";
     <div class="w-full md:w-1/2">
       <Image
         src={casoImage}
-        alt="Caso de exito GAF"
+        alt="Caso de exito Mapei Estadio de Fútbol Club Monterrey"
         class="rounded-lg w-full h-auto"
-        width={600}
-        height={400}
+        width={casoImage.width}
+        height={casoImage.height}
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px"
+        ,
+        densities={[1, 1.5, 2]}
         loading="lazy"
         data-aos="zoom-in-up"
       />
@@ -43,13 +46,14 @@ import casoImage2 from "@assets/images/proyectos/saputo-usa.webp";
         class="text-primary text-2xl md:text-3xl font-bold mb-2 leading-snug"
         data-aos="zoom-in-up"
       >
-        Kia Forum, California
+        Estadio de Fútbol Club Monterrey
       </h2>
       <div class="w-[140px] h-[2px] bg-accent mb-2 md:mb-6"></div>
       <p class="text-gray-700 text-lg leading-relaxed" data-aos="zoom-in-up">
-        Los revestimientos de techo GAF se aplicaron en esta legendaria sede de
-        eventos de más de 12,500 m², garantizando la protección de su estructura
-        y su icónico logotipo.
+        En este moderno estadio, Mapei lideró la restauración de concreto y el
+        sellado de grietas en las gradas. Además, se encargó de la
+        impermeabilización de estructuras, la instalación de pisos porcelánicos
+        en áreas de alta vibración y el control de humedad en sótanos.
       </p>
     </div>
   </div>
@@ -61,10 +65,12 @@ import casoImage2 from "@assets/images/proyectos/saputo-usa.webp";
     <div class="w-full md:w-1/2">
       <Image
         src={casoImage2}
-        alt="Caso de exito #2 GAF"
+        alt="Caso de exito Mapei Centro Cultural Manuel Gómez Morín "
         class="rounded-lg w-full h-auto"
-        width={600}
-        height={400}
+        width={casoImage2.width}
+        height={casoImage2.height}
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px",
+        densities={[1, 1.5, 2]}
         loading="lazy"
         data-aos="zoom-in-up"
       />
@@ -76,15 +82,14 @@ import casoImage2 from "@assets/images/proyectos/saputo-usa.webp";
         class="text-primary text-2xl md:text-3xl font-bold mb-2 leading-snug"
         data-aos="zoom-in-up"
       >
-        Planta Saputo Cheese USA
+        Centro Cultural Manuel Gómez Morín
       </h2>
       <div class="w-[140px] h-[2px] bg-accent mb-6"></div>
       <p class="text-gray-700 text-lg leading-relaxed" data-aos="zoom-in-up">
-        Para proteger una instalación de Saputo Cheese con equipo electrónico
-        sensible del frío extremo de Wisconsin, se instaló un sistema GAF para
-        almacenamiento en frío. La solución incluyó una innovadora barrera de
-        vapor y una membrana TPO para controlar la condensación y las
-        fluctuaciones de temperatura.
+        Para este importante proyecto de mural urbano, Mapei suministró los
+        productos para la impermeabilización de los 1,200 m² de la cúpula del
+        centro cultural. Se utilizó una solución que aseguró una superficie
+        duradera y saludable para recibir las obras de los artistas.
       </p>
     </div>
   </div>
