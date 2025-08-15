@@ -4,5 +4,5 @@ excerpt: "Flexibilidad superior para climas extremos. Manto asfáltico modificad
 exampleImage: "/images/productos/flexo-s6-mapei.webp"
 marca: "MAPEI"
 categoria: "Mantos Asfálticos"
-tipo: "Asfalticos"
+tipo: "Asfálticos"
 ---
