@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+
+// Importación de la imagen descriptiva de la empresa
+import mantosAsfalticosImage from "@assets/images/impermeabilizacion-complementos-mapei-mexico.webp";
+---
+
+<section class="py-12" id="productos">
+  <div class="mx-4">
+    <div
+      class="max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-[5px] items-center py-4 lg:py-12 bg-white rounded-md mx-auto shadow-lg hover:shadow-xl transition-shadow duration-300"
+    >
+      <!-- Imagen descriptiva de la empresa -->
+      <div class="w-full lg:w-1/2">
+        <Image
+          src={mantosAsfalticosImage}
+          alt="Mantos Asfálticos Mapei"
+          class="rounded-lg w-full h-auto"
+          width={889}
+          height={667}
+          loading="lazy"
+          data-aos="fade-right"
+        />
+      </div>
+
+      <!-- Bloque de descripción -->
+      <div class="w-full lg:w-1/2 py-4 lg:p-6">
+        <h2
+          class="text-primary text-3xl font-bold mb-2 leading-snug"
+          data-aos="fade-right"
+        >
+          <strong class="text-accent">Mantos Asfálticos</strong> Prefabricados
+        </h2>
+        <div class="w-[140px] h-[2px] bg-accent mb-6"></div>
+        <p class="text-gray-700 text-lg leading-relaxed" data-aos="fade-right">
+          La solución más robusta y tradicional para proyectos de gran
+          envergadura. Estos mantos de asfalto modificado con polímeros ofrecen
+          una durabilidad excepcional y una resistencia superior, ideal para
+          naves industriales y grandes cubiertas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="" id="">
+  <div class="mx-4">
+    <h3 class="text-white text-center text-3xl" data-aos="fade-right">
+      Impermeabilizantes <strong class="text-bold">Asfálticos</strong> destacados
+    </h3>
+  </div>
+</section>
