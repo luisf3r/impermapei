@@ -16,8 +16,10 @@ import mantosAsfalticosImage from "@assets/images/impermeabilizacion-complemento
           src={mantosAsfalticosImage}
           alt="Mantos Asfálticos Mapei"
           class="rounded-lg w-full h-auto"
-          width={889}
-          height={667}
+          width={mantosAsfalticosImage.width}
+          height={mantosAsfalticosImage.height}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px",
+          densities={[1, 1.5, 2]}
           loading="lazy"
           data-aos="fade-right"
         />

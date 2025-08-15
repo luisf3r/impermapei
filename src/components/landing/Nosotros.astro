@@ -10,7 +10,7 @@ import empresaImage from "@assets/images/corporativo-construyendo-soluciones---.
     class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-[35px] items-center"
   >
     <!-- Bloque de descripción -->
-    <div class="w-full md:w-1/2 bg-white rounded-md p-6 order-2 md:order-1" >
+    <div class="w-full md:w-1/2 bg-white rounded-md p-6 order-2 md:order-1">
       <h2
         class="text-primary text-2xl md:text-3xl font-bold mb-2 leading-snug"
         data-aos="zoom-in-up"
@@ -19,12 +19,13 @@ import empresaImage from "@assets/images/corporativo-construyendo-soluciones---.
       </h2>
       <div class="w-[140px] h-[2px] bg-accent mb-6"></div>
       <p class="text-gray-700 text-lg leading-relaxed" data-aos="zoom-in-up">
-        Somos <strong>CORPORATIVO CONSTRUYENDO SOLUCIONES</strong>, distribuidores líderes de
-        <strong>impermeabilizantes GAF en México</strong>. Con más de 40 años de experiencia en
-        la protección de estructuras, combinamos nuestro liderazgo en el mercado
-        con la tecnología innovadora de GAF para garantizar la máxima
-        durabilidad y eficiencia en tus proyectos. Nuestro compromiso es
-        proteger tu inversión con soluciones que perduran.
+        Somos <strong>CORPORATIVO CONSTRUYENDO SOLUCIONES</strong>,
+        distribuidores líderes de
+        <strong>impermeabilizantes Mapei en México</strong>. Con más de 40 años
+        de experiencia en la protección de estructuras, combinamos nuestro
+        liderazgo en el mercado con la tecnología innovadora de Mapei para
+        garantizar la máxima durabilidad y eficiencia en tus proyectos. Nuestro
+        compromiso es proteger tu inversión con soluciones que perduran.
       </p>
     </div>
 
@@ -34,8 +35,10 @@ import empresaImage from "@assets/images/corporativo-construyendo-soluciones---.
         src={empresaImage}
         alt="Imagen representativa de nuestra empresa"
         class="rounded-lg w-full h-auto"
-        width={600}
-        height={400}
+        width={empresaImage.width}
+        height={empresaImage.height}
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px",
+        densities={[1, 1.5, 2]}
         loading="lazy"
         data-aos="zoom-in-up"
       />

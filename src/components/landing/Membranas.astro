@@ -16,8 +16,10 @@ import sistemaImage from "@assets/images/impermeabilizacion-obra-enterrada-mapei
           src={sistemaImage}
           alt="Membranas Líquidas y Cementosas Mapei"
           class="rounded-lg w-full h-auto"
-          width={889}
-          height={667}
+          width={sistemaImage.width}
+          height={sistemaImage.height}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px",
+          densities={[1, 1.5, 2]}
           loading="lazy"
           data-aos="fade-right"
         />

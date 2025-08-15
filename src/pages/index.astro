@@ -1,24 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from "@components/landing/Hero.astro";
-import Proteccion from '@components/landing/Proteccion.astro';
+import Introduccion from '@components/landing/Introduccion.astro';
 import ProductsByBrand from '@components/landing/ProductsByBrand.astro';
 import Proyectos from '@components/landing/Proyectos.astro';
 import Nosotros from '@components/landing/Nosotros.astro';
 import Footer from '@components/Footer.astro';
-import LiquidosMapei from '@components/landing/LiquidosMapei.astro';
+import Liquidos from '@components/landing/Liquidos.astro';
 import FooterBottom from "@components/FooterBottom.astro";
 import Instalacion from "@components/landing/Instalacion.astro";
 import Beneficios from "@components/landing/Beneficios.astro";
 import Membranas from '@components/landing/Membranas.astro';
-import Acrilicos from '@components/landing/Acrilicos.astro';
-import Asfalticos from '@components/landing/Asfalticos.astro';
 import MantosAsfalticos from '@components/landing/MantosAsfalticos.astro';
 ---
 
 <Layout
-  title="Impermeabilizantes GAF en México | Asesoría Profesional" 
-  description="Distribuidor líder de impermeabilizantes GAF en México. Ofrecemos soluciones de alto desempeño para techos, pisos y estacionamientos. ¡Pide tu asesoría GRATIS!"
+  title="Impermeabilizantes Mapei en México | Asesoría Profesional" 
+  description="Distribuidor líder de impermeabilizantes Mapei en México. Ofrecemos soluciones de alto desempeño para techos, pisos y estacionamientos. ¡Pide tu asesoría GRATIS!"
   ogtype="website"
   ogimage="https://www.impergaf.w365.uno/images/impermeabilizantes-gaf-mexico-og.webp"
   noindex={false}
@@ -30,7 +28,7 @@ import MantosAsfalticos from '@components/landing/MantosAsfalticos.astro';
   
   <div class="bg-gradient-to-r from-[#9BAFD9] to-[#103783]">
     <div id="beneficios"></div>
-    <Proteccion />
+    <Introduccion />
     <Beneficios />
   </div>  
 
@@ -40,7 +38,7 @@ import MantosAsfalticos from '@components/landing/MantosAsfalticos.astro';
 
   <div id="productos"></div>
   <div class="bg-gradient-to-r from-[#9BAFD9] to-[#103783]">
-    <LiquidosMapei />
+    <Liquidos />
     <ProductsByBrand categoria="Impermeabilizantes Liquidos" bgColor="" />
   </div>
 
@@ -49,19 +47,9 @@ import MantosAsfalticos from '@components/landing/MantosAsfalticos.astro';
     <ProductsByBrand categoria="Membranas Liquidas" bgColor="" />
   </div>
 
-  <div class="bg-[#033441] bg-cover bg-center bg-no-repeat">
+  <div class="bg-gradient-to-r from-[#9BAFD9] to-[#103783]">
     <MantosAsfalticos />
     <ProductsByBrand categoria="Mantos Asfálticos" bgColor="" />
-  </div>
-
-  <div class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat">
-    <Acrilicos /> 
-    <ProductsByBrand categoria="Acrílicos" bgColor="" />
-  </div>
-
-  <div class="bg-[#343642] bg-cover bg-center bg-no-repeat">
-    <Asfalticos />
-    <ProductsByBrand categoria="Asfálticos" bgColor="" />
   </div>
 
 
@@ -71,7 +59,7 @@ import MantosAsfalticos from '@components/landing/MantosAsfalticos.astro';
 
 
   
-  <div class="bg-[url('/src/assets/images/fondos/fondo-rojo.webp')] bg-cover bg-center bg-no-repeat">
+  <div class="bg-gradient-to-r from-[#9BAFD9] to-[#103783]">
     <Nosotros />
   </div> 
 
