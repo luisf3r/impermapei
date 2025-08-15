@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
 // https://astro.build/config
 export default defineConfig({
   output: 'static', // Asegúrate de que la salida sea estática
-  site: 'https://www.impergaf.w365.uno/',
+  site: 'https://www.impermapei.w365.uno/',
   integrations: [tailwind(), icon(), sitemap({
     filter: (page) =>
       page !== '/gracias/' &&

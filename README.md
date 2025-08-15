@@ -1,17 +1,18 @@
-# Impergaf - Especialistas en Impermeabilización GAF
+# Impermapei - Especialistas en Impermeabilización MAPEI
 
-Repositorio oficial del sitio web de Impergaf, empresa líder en soluciones de impermeabilización con productos GAF para residencias, comercios e industrias en México.
+Repositorio oficial del sitio web de Impermapei, empresa líder en soluciones de impermeabilización con productos MAPEI para residencias, comercios e industrias en México. Con más de 40 años de experiencia y un equipo de instaladores certificados por MAPEI.
 
 ## 🏗️ Acerca del Proyecto
 
-Este sitio web está construido utilizando [Astro](https://astro.build), un moderno generador de sitios estáticos que ofrece rendimiento excepcional y SEO optimizado. El diseño está enfocado en mostrar los productos y servicios de impermeabilización GAF de manera profesional y atractiva.
+Este sitio web está construido utilizando [Astro](https://astro.build), un moderno generador de sitios estáticos que ofrece rendimiento excepcional y SEO optimizado. El diseño está enfocado en mostrar los productos y servicios de impermeabilización MAPEI de manera profesional y atractiva, destacando la tecnología italiana con producción local.
 
 ### 🎯 Objetivos del Sitio
 
-- Presentar la gama completa de productos GAF para impermeabilización
-- Mostrar proyectos realizados y casos de éxito
-- Facilitar el contacto con expertos técnicos
-- Proporcionar información técnica detallada sobre cada producto
+- Presentar la gama completa de productos MAPEI para impermeabilización
+- Destacar impermeabilizantes líquidos, membranas líquidas y mantos asfálticos
+- Mostrar proyectos realizados y casos de éxito con productos MAPEI
+- Facilitar el contacto con expertos técnicos certificados
+- Proporcionar información técnica detallada sobre cada producto MAPEI
 - Optimizar la conversión de visitantes en clientes
 
 ## 🌟 Características Principales
@@ -23,25 +24,32 @@ Este sitio web está construido utilizando [Astro](https://astro.build), un mode
 - **Accesibilidad** - Cumple con estándares de accesibilidad web
 
 ### Funcionalidades
-- **Catálogo de productos GAF** - Información detallada de cada impermeabilizante
-- **Galería de proyectos** - Casos de éxito y aplicaciones reales
-- **Formulario de contacto inteligente** - Captura de leads optimizada
-- **Integración WhatsApp** - Contacto directo con expertos
-- **Secciones informativas** - Guías técnicas y beneficios de productos
+- **Catálogo de productos MAPEI** - Información detallada de impermeabilizantes líquidos, membranas líquidas y mantos asfálticos
+- **Galería de proyectos** - Casos de éxito y aplicaciones reales con productos MAPEI
+- **Formulario de contacto inteligente** - Captura de leads optimizada con asesoría técnica gratuita
+- **Integración WhatsApp** - Contacto directo con expertos certificados por MAPEI
+- **Secciones informativas** - Guías técnicas y beneficios de productos con tecnología italiana
 
 ## 🚀 Estructura del Proyecto
 
 ```text
-impergaf/
+impermapei/
 ├── public/
-│   ├── docs/              # Documentación técnica
 │   ├── favicon.svg        # Favicon del sitio
 │   └── images/
-│       ├── productos/     # Imágenes de productos GAF
-│       └── proyectos/     # Imágenes de proyectos realizados
+│       ├── productos/     # Imágenes de productos MAPEI
+│       │   ├── mapelastic-smart-mapei.webp
+│       │   ├── flexo-s6-mapei.webp
+│       │   ├── planiseal-88-mapei.webp
+│       │   ├── trend-hs-app-mapei.webp
+│       │   └── [otros productos MAPEI]
+│       └── impermeabilizantes-gaf-mexico-og.webp
 ├── src/
 │   ├── assets/
 │   │   └── images/        # Imágenes optimizadas del sitio
+│   │       ├── impermeabilizantes-mapei.webp
+│   │       ├── proyecto-mapei.webp
+│   │       └── proyectos-de-impermeabilizantes-mapei-en-mexico.webp
 │   ├── components/
 │   │   ├── ContactForm.astro      # Formulario de contacto
 │   │   ├── Footer.astro           # Pie de página
@@ -50,15 +58,22 @@ impergaf/
 │   │   ├── WhatsAppList.astro     # Lista de WhatsApp
 │   │   └── landing/               # Componentes de landing page
 │   │       ├── Hero.astro         # Sección principal
-│   │       ├── Beneficios.astro   # Beneficios de productos
-│   │       ├── Impermeabilizantes.astro
+│   │       ├── Beneficios.astro   # Beneficios de productos MAPEI
+│   │       ├── Introduccion.astro # Por qué elegir MAPEI
+│   │       ├── Liquidos.astro     # Impermeabilizantes líquidos
+│   │       ├── Membranas.astro    # Membranas líquidas
+│   │       ├── MantosAsfalticos.astro # Mantos asfálticos
+│   │       ├── Instalacion.astro  # Proceso de instalación
 │   │       ├── Nosotros.astro     # Sección corporativa
 │   │       ├── ProductsByBrand.astro
-│   │       ├── Proyectos.astro    # Galería de proyectos
-│   │       └── [otros componentes]
+│   │       └── Proyectos.astro    # Galería de proyectos
 │   ├── content/
 │   │   ├── config.ts              # Configuración de contenido
-│   │   └── productos/             # Contenido de productos
+│   │   └── productos/             # Contenido de productos MAPEI
+│   │       ├── mapelastic-smart.md
+│   │       ├── flexo-s6.md
+│   │       ├── planiseal-88.md
+│   │       └── [otros productos]
 │   ├── layouts/
 │   │   └── Layout.astro           # Layout principal
 │   ├── pages/
@@ -117,7 +132,7 @@ Todos los comandos se ejecutan desde la raíz del proyecto:
 ```bash
 # Clonar el repositorio
 git clone [url-del-repositorio]
-cd impergaf
+cd impermapei
 
 # Instalar dependencias
 pnpm install
@@ -140,20 +155,37 @@ pnpm dev
 
 ## 📞 Información de Contacto
 
-### Impergaf
-- **Sitio web**: [impermeabilizantesgaf.com](https://www.impermeabilizantesgaf.com)
+### Impermapei
+- **Sitio web**: [impermapei.w365.uno](https://www.impermapei.w365.uno)
 - **WhatsApp**: +52 33 1079 3173 / +52 55 6037 0930
 - **Teléfonos**: 33-3615-1421 / (800) 8909-363
 - **Horario**: Lunes a Viernes 10am-6pm, Sábado 10am-2pm
+- **Especialidad**: Impermeabilizantes MAPEI con tecnología italiana
+- **Experiencia**: Más de 40 años en el mercado mexicano
+
+## 🏆 Productos Destacados
+
+### Categorías de Productos MAPEI
+- **Impermeabilizantes Líquidos**: Aquaflex Roof Plus, Aquaflex Techos 3 Años, Aquaflex Techos HR Green
+- **Membranas Líquidas**: Mapelastic Smart, Mapelastic Aquadefense
+- **Mantos Asfálticos**: Trend HS APP, Flexo S6
+- **Sistemas Complementarios**: Planiseal 88
+
+### Ventajas de MAPEI
+- ✅ Tecnología italiana con más de 80 años de experiencia global
+- ✅ Producción local adaptada al clima mexicano
+- ✅ Instaladores certificados por MAPEI
+- ✅ Asesoría técnica gratuita especializada
+- ✅ Garantía y soporte técnico completo
 
 ## 🤝 Contribución
 
-Este proyecto es propiedad de Impergaf. Para contribuciones o reportes de bugs, por favor contacta directamente con el equipo de desarrollo.
+Este proyecto es propiedad de Impermapei. Para contribuciones o reportes de bugs, por favor contacta directamente con el equipo de desarrollo.
 
 ## 📝 Licencia
 
-Este proyecto está protegido por derechos de autor. © Impergaf 2025. Todos los derechos reservados.
+Este proyecto está protegido por derechos de autor. © Impermapei 2025. Todos los derechos reservados.
 
 ---
 
-**Desarrollado con ❤️ para Impergaf - Especialistas en Impermeabilización GAF**
+**Desarrollado con ❤️ para Impermapei - Especialistas en Impermeabilización MAPEI**
