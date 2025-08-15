@@ -1,15 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import PhoneList from "@components/PhoneList.astro"; 
-import ContactForm from '@components/ContactForm.astro';
+import PhoneList from "@components/PhoneList.astro";
+import ContactForm from "@components/ContactForm.astro";
 import WhatsAppList from "@components/WhatsAppList.astro";
 // Importación de la imagen relacionada
-import contactoImage from "@assets/images/contactanos.webp";
+import contactoImage from "@assets/images/contacto-.webp";
 ---
 
 <footer id="contacto">
-  <div class="py-12 ">
+  <div class="py-12">
     <div
       class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10"
     >
@@ -23,8 +23,11 @@ import contactoImage from "@assets/images/contactanos.webp";
             src={contactoImage}
             alt="Imagen de contacto"
             class="rounded-lg w-full h-auto"
-            width={900}
-            height={600}
+            width={contactoImage.width}
+            height={contactoImage.height}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px"
+            ,
+            densities={[1, 1.5, 2]}
             loading="lazy"
             data-aos="zoom-in-up"
           />
@@ -38,9 +41,15 @@ import contactoImage from "@assets/images/contactanos.webp";
         </h2>
         <div class="w-[140px] h-[2px] bg-accent mb-2"></div>
         <p class="text-xl text-primary">
-          Nuestros asesores técnicos están listos para ayudarte. Conversemos sobre tu proyecto y encontremos juntos la solución MAPEI ideal para proteger tu inversión.
+          Nuestros asesores técnicos están listos para ayudarte. Conversemos
+          sobre tu proyecto y encontremos juntos la solución MAPEI ideal para
+          proteger tu inversión.
         </p>
-        <p class="text-xl text-primary"> <strong>Llámanos y eleva la durabilidad y el rendimiento de tu construcción</strong> con los sistemas impermeabilizantes líderes del mercado.</p>
+        <p class="text-xl text-primary">
+          <strong
+            >Llámanos y eleva la durabilidad y el rendimiento de tu construcción</strong
+          > con los sistemas impermeabilizantes líderes del mercado.
+        </p>
 
         <h3 class="text-accent text-2xl font-bold">Habla con un experto</h3>
         <!-- Lista de Teléfonos -->
@@ -52,7 +61,7 @@ import contactoImage from "@assets/images/contactanos.webp";
     </div>
   </div>
 
-  <div class="py-12 ">
+  <div class="py-12">
     <div
       class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 mt-12"
     >
@@ -64,11 +73,9 @@ import contactoImage from "@assets/images/contactanos.webp";
           height="42"
           title="mail icon"
           class="pr-0"
-          class="text-accent" 
-        /> 
-        <h3 class="text-primary text-3xl font-bold mb-6">
-          Envía un mensaje
-        </h3>
+          class="text-accent"
+        />
+        <h3 class="text-primary text-3xl font-bold mb-6">Envía un mensaje</h3>
         <!-- Formulario de Contacto -->
         <ContactForm />
       </div>
@@ -79,7 +86,7 @@ import contactoImage from "@assets/images/contactanos.webp";
           width="42"
           height="42"
           title="clock icon"
-          class="text-accent"     
+          class="text-accent"
         />
         <h3 class="font-bold text-primary text-3xl mb-6">
           Horario de atención
