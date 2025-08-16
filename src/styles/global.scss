@@ -11,7 +11,7 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #0078C1; /* color del subrayado */
+  background-color: #E771A5; /* color del subrayado */
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -21,5 +21,5 @@
 }
 
 .menu-item:hover {
-  color: #0078C1; /* color del texto al pasar el cursor */
+  color: #FFFFFF; /* color del texto al pasar el cursor */
 }
