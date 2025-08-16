@@ -1,36 +1,38 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import Hero from "@components/landing/Hero.astro";
-import Introduccion from '@components/landing/Introduccion.astro';
-import ProductsByBrand from '@components/landing/ProductsByBrand.astro';
-import Proyectos from '@components/landing/Proyectos.astro';
-import Nosotros from '@components/landing/Nosotros.astro';
-import Footer from '@components/Footer.astro';
-import Liquidos from '@components/landing/Liquidos.astro';
+import Introduccion from "@components/landing/Introduccion.astro";
+import ProductsByBrand from "@components/landing/ProductsByBrand.astro";
+import Proyectos from "@components/landing/Proyectos.astro";
+import Nosotros from "@components/landing/Nosotros.astro";
+import Footer from "@components/Footer.astro";
+import Liquidos from "@components/landing/Liquidos.astro";
 import FooterBottom from "@components/FooterBottom.astro";
 import Instalacion from "@components/landing/Instalacion.astro";
 import Beneficios from "@components/landing/Beneficios.astro";
-import Membranas from '@components/landing/Membranas.astro';
-import MantosAsfalticos from '@components/landing/MantosAsfalticos.astro';
+import Membranas from "@components/landing/Membranas.astro";
+import MantosAsfalticos from "@components/landing/MantosAsfalticos.astro";
 ---
 
 <Layout
-  title="Impermeabilizantes Mapei en México | Asesoría Profesional" 
-  description="Distribuidor líder de impermeabilizantes Mapei en México. Ofrecemos soluciones de alto desempeño para techos, pisos y estacionamientos. ¡Pide tu asesoría GRATIS!"
+  title="Impermeabilizantes Mapei en México | Instaladores Certificados"
+  description="Soluciones Líderes en Impermeabilizantes Mapei. Con 40 Años de Experiencia, Ofrecemos Sistemas Acrílicos, Cementosos y Asfálticos con Garantía. Asesoría Técnica Sin Costo."
   ogtype="website"
   ogimage="https://www.impermapei.w365.uno/images/impermeabilizantes-mapei-mexico-og.webp"
-  noindex={false}
+  noindex={true}
 >
   <slot />
-  <div class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat">
+  <div
+    class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat"
+  >
     <Hero />
   </div>
-  
+
   <div class="bg-gradient-to-r from-[#9BAFD9] to-[#103783]">
     <div id="beneficios"></div>
     <Introduccion />
     <Beneficios />
-  </div>  
+  </div>
 
   <div class="bg-gradient-to-r from-[#EBF4F5] to-[#B5C6E0]">
     <Instalacion />
@@ -42,7 +44,9 @@ import MantosAsfalticos from '@components/landing/MantosAsfalticos.astro';
     <ProductsByBrand categoria="Impermeabilizantes Liquidos" bgColor="" />
   </div>
 
-  <div class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat">
+  <div
+    class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat"
+  >
     <Membranas />
     <ProductsByBrand categoria="Membranas Liquidas" bgColor="" />
   </div>
@@ -52,23 +56,21 @@ import MantosAsfalticos from '@components/landing/MantosAsfalticos.astro';
     <ProductsByBrand categoria="Mantos Asfálticos" bgColor="" />
   </div>
 
-
-  <div class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat">
+  <div
+    class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat"
+  >
     <Proyectos />
   </div>
 
-
-  
   <div class="bg-gradient-to-r from-[#9BAFD9] to-[#103783]">
     <Nosotros />
-  </div> 
+  </div>
 
-
-
-  <div class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat">
+  <div
+    class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat"
+  >
     <Footer />
   </div>
 
   <FooterBottom />
-  
 </Layout>
