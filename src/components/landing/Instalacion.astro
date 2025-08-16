@@ -9,32 +9,38 @@ import sistemaImage2 from "@assets/images/aplicacion-de-impermeabilizantes-mapei
 const caracteristicas = [
   {
     icon: "mdi:certificate-outline",
-    text: "Técnicos Certificados"
+    text: "Técnicos Certificados",
   },
   {
-    icon: "mdi:shield-check-outline", 
-    text: "Garantía por Escrito"
+    icon: "mdi:shield-check-outline",
+    text: "Garantía por Escrito",
   },
   {
     icon: "mdi:clock-time-four-outline",
-    text: "40 Años de Experiencia"
-  }
+    text: "40 Años de Experiencia",
+  },
 ];
 ---
 
-<section 
-  class="py-16 bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat relative overflow-hidden" 
+<section
+  class="py-16 bg-[url('/src/assets/images/fondos/fondo-gotas-izq-der.webp')] bg-cover bg-center bg-no-repeat relative overflow-hidden"
   id="instalacion"
 >
-  <!-- Overlay sutil para mejor legibilidad -->
-  <div class="absolute inset-0 bg-white/30"></div>
-  
+  <!-- Overlay degradado sutil para mejorar legibilidad -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-white/70 via-white/50 to-white/30"
+  >
+  </div>
+
   <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col lg:flex-row gap-12 items-center">
       <!-- Imagen descriptiva con efectos mejorados -->
       <div class="w-full lg:w-1/2">
         <div class="relative group">
-          <div class="absolute -inset-4 bg-gradient-to-r from-blue-300 to-blue-500 rounded-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300 blur-lg"></div>
+          <div
+            class="absolute -inset-4 bg-gradient-to-r from-blue-300 to-blue-500 rounded-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300 blur-lg"
+          >
+          </div>
           <Image
             src={sistemaImage2}
             alt="Instalación profesional de Impermeabilizantes Mapei para techos"
@@ -52,7 +58,7 @@ const caracteristicas = [
       <!-- Contenido mejorado -->
       <div class="w-full lg:w-1/2">
         <!-- Badge de calidad -->
-        <div 
+        <div
           class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg"
           data-aos="fade-up"
         >
@@ -66,7 +72,7 @@ const caracteristicas = [
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          La Mejor Tecnología Merece la 
+          La Mejor Tecnología Merece la
           <span class="text-accent block mt-2">Mejor Instalación</span>
         </h2>
 
@@ -76,50 +82,71 @@ const caracteristicas = [
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Maximiza el rendimiento de tu sistema impermeabilizante con nuestra experiencia
+          Maximiza el rendimiento de tu sistema impermeabilizante con nuestra
+          experiencia
         </h3>
 
         <!-- Línea decorativa -->
-        <div class="w-20 h-1 bg-gradient-to-r from-accent to-blue-500 mb-8" data-aos="fade-up" data-aos-delay="300"></div>
+        <div
+          class="w-20 h-1 bg-gradient-to-r from-accent to-blue-500 mb-8"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+        </div>
 
         <!-- Características destacadas -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8" data-aos="fade-up" data-aos-delay="400">
-          {caracteristicas.map((caracteristica, index) => (
-            <div class="flex flex-col items-center text-center p-4 bg-white/60 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <Icon name={caracteristica.icon} class="text-accent text-3xl mb-2" />
-              <span class="text-primary font-semibold text-sm">{caracteristica.text}</span>
-            </div>
-          ))}
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          {
+            caracteristicas.map((caracteristica, index) => (
+              <div class="flex flex-col items-center text-center p-4 bg-white/60 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                <Icon
+                  name={caracteristica.icon}
+                  class="text-accent text-3xl mb-2"
+                />
+                <span class="text-primary font-semibold text-sm">
+                  {caracteristica.text}
+                </span>
+              </div>
+            ))
+          }
         </div>
 
         <!-- Contenido principal -->
         <div class="space-y-4">
-          <p 
-            class="text-gray-700 text-lg leading-relaxed" 
-            data-aos="fade-up" 
+          <p
+            class="text-gray-700 text-lg leading-relaxed"
+            data-aos="fade-up"
             data-aos-delay="500"
           >
-            Un sistema <strong class="text-primary">impermeabilizante Mapei</strong> de clase mundial 
-            requiere una aplicación experta para alcanzar su máximo potencial. Nuestro equipo 
-            de técnicos certificados cuenta con más de cuatro décadas de experiencia 
-            aplicando sistemas de alta tecnología con precisión.
+            Un sistema <strong class="text-primary"
+              >impermeabilizante Mapei</strong
+            > de clase mundial requiere una aplicación experta para alcanzar su máximo
+            potencial. Nuestro equipo de técnicos certificados cuenta con más de
+            cuatro décadas de experiencia aplicando sistemas de alta tecnología con
+            precisión.
           </p>
-          
-          <p 
-            class="text-gray-700 text-lg leading-relaxed" 
-            data-aos="fade-up" 
+
+          <p
+            class="text-gray-700 text-lg leading-relaxed"
+            data-aos="fade-up"
             data-aos-delay="600"
           >
-            Obtén una instalación que maximiza la adherencia, la elasticidad y la vida útil 
-            del producto. <strong class="text-accent">Confía en los expertos y protege tu 
-            proyecto con nuestra garantía por escrito.</strong>
+            Obtén una instalación que maximiza la adherencia, la elasticidad y
+            la vida útil del producto. <strong class="text-accent"
+              >Confía en los expertos y protege tu proyecto con nuestra garantía
+              por escrito.</strong
+            >
           </p>
         </div>
 
         <!-- CTA button -->
         <div class="mt-8" data-aos="fade-up" data-aos-delay="700">
-          <a 
-            href="#contacto" 
+          <a
+            href="#contacto"
             class="inline-flex items-center gap-2 bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-accent text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             <Icon name="mdi:phone" class="w-5 h-5" />
