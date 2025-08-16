@@ -8,8 +8,12 @@ import WhatsAppList from "@components/WhatsAppList.astro";
 import contactoImage from "@assets/images/contacto-.webp";
 ---
 
-<footer id="contacto">
-  <div class="py-12 fondo-claro">
+<footer id="contacto" class="bg-[url('/src/assets/images/fondos/fondo-gotas-izq-der.webp')] bg-cover bg-center bg-no-repeat relative overflow-hidden">
+
+  <!-- Overlay degradado sutil para mejorar legibilidad -->
+  <div class="absolute inset-0 bg-gradient-to-br from-white/70 via-white/50 to-white/30"></div>
+
+  <div class="py-12 fondo-claro relative">
     <div
       class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10"
     >
