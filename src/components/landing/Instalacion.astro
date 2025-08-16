@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 import sistemaImage2 from "@assets/images/aplicacion-de-impermeabilizantes-mapei-en-mexico-.webp";
 ---
 
-<section class="py-12 fondo-claro" id="instalacion">
+<section class="py-12 fondo-claro bg-gradient-to-r from-[#EBF4F5] to-[#B5C6E0]" id="instalacion">
   <div
     class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-[35px] items-center md:py-12"
   >
@@ -15,8 +15,10 @@ import sistemaImage2 from "@assets/images/aplicacion-de-impermeabilizantes-mapei
         src={sistemaImage2}
         alt="Instalación de Impermeabilizantes Mapei para techos"
         class="rounded-lg w-full h-auto shadow-lg hover:shadow-xl transition-shadow duration-300"
-        width={743}
-        height={557}
+        width={sistemaImage2.width}
+        height={sistemaImage2.height}
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px",
+        densities={[1, 1.5, 2]}
         loading="lazy"
         data-aos="zoom-in-up"
       />
