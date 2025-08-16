@@ -1,45 +1,52 @@
 ---
 import { Image } from "astro:assets";
-import PhoneList from "@components/PhoneList.astro"; 
+import PhoneList from "@components/PhoneList.astro";
 import WhatsAppList from "@components/WhatsAppList.astro";
-import ContactForm from '@components/ContactForm.astro';
-import heroImage from "@assets/images/impermeabilizantes-mapei-en-mexico.webp"; 
-
+import ContactForm from "@components/ContactForm.astro";
+import heroImage from "@assets/images/impermeabilizantes-mapei-en-mexico.webp";
 ---
 
-
 <section class="pt-8 pb-12">
-
-
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:flex lg:gap-8">
     <!-- Columna Izquierda -->
     <div class="lg:w-2/3 flex flex-col items-start">
       <Image
-          src={heroImage}
-          alt="Impermeabilizantes Mapei en México"
-          width={heroImage.width}
-          height={heroImage.height}
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px",
-          densities={[1, 1.5, 2]}
-          class="rounded-lg shadow-md w-full h-auto mb-4 lg:mb-6"
-          loading="eager"
-        />
+        src={heroImage}
+        alt="Impermeabilizantes Mapei en México"
+        width={heroImage.width}
+        height={heroImage.height}
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px"
+        ,
+        densities={[1, 1.5, 2]}
+        class="rounded-lg shadow-md w-full h-auto mb-4 lg:mb-6"
+        loading="eager"
+      />
 
       <h1 class="text-accent text-3xl lg:text-3xl font-bold leading-snug">
         Impermeabilizantes Mapei en México
       </h1>
-      <h2 class="text-primary text-xl mt-2 mb-2">Protección Total para Cada Rincón de México.</h2>
+      <h2 class="text-primary text-xl mt-2 mb-2">
+        Protección Definitiva para Tu Construcción con Servicio de Instalación
+        Garantizado por Escrito.
+      </h2>
       <div class="w-[140px] h-[2px] bg-support mx-left mt-2 mb-4"></div>
       <p class="text-primary text-lg mt-2 mb-2">
-        Con <strong>40 años de experiencia</strong> y un <strong>equipo de instaladores certificados por Mapei</strong>, obtienes la máxima protección y durabilidad para tu inversión.
+        Con <strong>40 años de experiencia</strong> y un equipo de
+        <strong>instaladores certificados por Mapei</strong>, aseguramos la
+        máxima protección y durabilidad para tu inversión. Desde techos y
+        terrazas hasta cisternas y cimentaciones, tenemos la solución perfecta.
       </p>
-      <h3 class="text-accent text-xl mt-2 font-bold hidden lg:block">Llámanos y obtén ASESORÍA TÉCNICA SIN COSTO</h3>
+      <h3 class="text-accent text-xl mt-2 font-bold hidden lg:block">
+        SOLICITA TU ASESORÍA TÉCNICA SIN COSTO
+      </h3>
     </div>
 
     <!-- Columna Derecha -->
     <div class="lg:w-1/3 bg-white p-6 rounded-lg shadow-md mt-6 lg:mt-0">
-      <h2 class="text-accent text-xl font-bold mb-4">Habla con un experto.<br> ¡ASESORÍA GRATIS!</h2>
-      
+      <h2 class="text-accent text-xl font-bold mb-4">
+        Habla con un Experto Ahora.<br /> ¡ASESORÍA GRATIS!
+      </h2>
+
       <!-- Lista de Teléfonos -->
       <WhatsAppList />
       <PhoneList />
