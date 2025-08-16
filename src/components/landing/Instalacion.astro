@@ -1,59 +1,132 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
 // Importación de la imagen descriptiva de la empresa
 import sistemaImage2 from "@assets/images/aplicacion-de-impermeabilizantes-mapei-en-mexico-.webp";
+
+// Características destacadas de la instalación
+const caracteristicas = [
+  {
+    icon: "mdi:certificate-outline",
+    text: "Técnicos Certificados"
+  },
+  {
+    icon: "mdi:shield-check-outline", 
+    text: "Garantía por Escrito"
+  },
+  {
+    icon: "mdi:clock-time-four-outline",
+    text: "40 Años de Experiencia"
+  }
+];
 ---
 
-<section class="py-12 fondo-claro bg-gradient-to-r from-[#EBF4F5] to-[#B5C6E0]" id="instalacion">
-  <div
-    class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-[35px] items-center md:py-12"
-  >
-    <!-- Imagen descriptiva de la empresa -->
-    <div class="w-full md:w-1/2">
-      <Image
-        src={sistemaImage2}
-        alt="Instalación de Impermeabilizantes Mapei para techos"
-        class="rounded-lg w-full h-auto shadow-lg hover:shadow-xl transition-shadow duration-300"
-        width={sistemaImage2.width}
-        height={sistemaImage2.height}
-        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px",
-        densities={[1, 1.5, 2]}
-        loading="lazy"
-        data-aos="zoom-in-up"
-      />
-    </div>
+<section 
+  class="py-16 bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat relative overflow-hidden" 
+  id="instalacion"
+>
+  <!-- Overlay sutil para mejor legibilidad -->
+  <div class="absolute inset-0 bg-white/30"></div>
+  
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row gap-12 items-center">
+      <!-- Imagen descriptiva con efectos mejorados -->
+      <div class="w-full lg:w-1/2">
+        <div class="relative group">
+          <div class="absolute -inset-4 bg-gradient-to-r from-blue-300 to-blue-500 rounded-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300 blur-lg"></div>
+          <Image
+            src={sistemaImage2}
+            alt="Instalación profesional de Impermeabilizantes Mapei para techos"
+            class="relative rounded-xl w-full h-auto shadow-2xl group-hover:shadow-3xl transition-all duration-500 transform group-hover:scale-[1.02]"
+            width={sistemaImage2.width}
+            height={sistemaImage2.height}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 45vw"
+            densities={[1, 1.5, 2]}
+            loading="lazy"
+            data-aos="zoom-in-up"
+          />
+        </div>
+      </div>
 
-    <!-- Bloque de descripción -->
-    <div
-      class="w-full md:w-1/2 bg-white rounded-md p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-    >
-      <h2
-        class="text-primary text-3xl font-bold mb-2 leading-snug"
-        data-aos="zoom-in-up"
-      >
-        <strong class="text-accent"
-          >La Mejor Tecnología Merece la Mejor Instalación</strong
+      <!-- Contenido mejorado -->
+      <div class="w-full lg:w-1/2">
+        <!-- Badge de calidad -->
+        <div 
+          class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg"
+          data-aos="fade-up"
         >
-      </h2>
-      <h3
-        class="text-primary text-2xl font-normal mb-2 leading-snug"
-        data-aos="zoom-in-up"
-      >
-        40 Años de Experiencia y Garantía de Aplicación por Escrito
-      </h3>
-      <div class="w-[140px] h-[2px] bg-accent mb-6"></div>
-      <p class="text-gray-700 text-lg leading-relaxed" data-aos="zoom-in-up">
-        Un sistema <strong>impermeabilizante Mapei</strong> de clase mundial requiere
-        una aplicación experta para alcanzar su máximo potencial. Nuestro equipo
-        de técnicos certificados cuenta con más de cuatro décadas de experiencia
-        aplicando sistemas de alta tecnología con precisión.
-      </p>
-      <p class="text-gray-700 text-lg leading-relaxed my-3" data-aos="zoom-in-up">
-        Obtén una instalación que maximiza la adherencia, la
-        elasticidad y la vida útil del producto. <strong>Confía en los expertos y
-        protege tu proyecto con nuestra garantía por escrito.</strong>
-      </p>
+          <Icon name="mdi:star" class="w-4 h-4" />
+          <span>Instalación Profesional Certificada</span>
+        </div>
+
+        <!-- Título principal -->
+        <h2
+          class="text-primary text-3xl lg:text-4xl font-bold mb-4 leading-tight"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          La Mejor Tecnología Merece la 
+          <span class="text-accent block mt-2">Mejor Instalación</span>
+        </h2>
+
+        <!-- Subtítulo -->
+        <h3
+          class="text-primary/80 text-xl lg:text-2xl font-medium mb-6 leading-relaxed"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Maximiza el rendimiento de tu sistema impermeabilizante con nuestra experiencia
+        </h3>
+
+        <!-- Línea decorativa -->
+        <div class="w-20 h-1 bg-gradient-to-r from-accent to-blue-500 mb-8" data-aos="fade-up" data-aos-delay="300"></div>
+
+        <!-- Características destacadas -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8" data-aos="fade-up" data-aos-delay="400">
+          {caracteristicas.map((caracteristica, index) => (
+            <div class="flex flex-col items-center text-center p-4 bg-white/60 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+              <Icon name={caracteristica.icon} class="text-accent text-3xl mb-2" />
+              <span class="text-primary font-semibold text-sm">{caracteristica.text}</span>
+            </div>
+          ))}
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="space-y-4">
+          <p 
+            class="text-gray-700 text-lg leading-relaxed" 
+            data-aos="fade-up" 
+            data-aos-delay="500"
+          >
+            Un sistema <strong class="text-primary">impermeabilizante Mapei</strong> de clase mundial 
+            requiere una aplicación experta para alcanzar su máximo potencial. Nuestro equipo 
+            de técnicos certificados cuenta con más de cuatro décadas de experiencia 
+            aplicando sistemas de alta tecnología con precisión.
+          </p>
+          
+          <p 
+            class="text-gray-700 text-lg leading-relaxed" 
+            data-aos="fade-up" 
+            data-aos-delay="600"
+          >
+            Obtén una instalación que maximiza la adherencia, la elasticidad y la vida útil 
+            del producto. <strong class="text-accent">Confía en los expertos y protege tu 
+            proyecto con nuestra garantía por escrito.</strong>
+          </p>
+        </div>
+
+        <!-- CTA button -->
+        <div class="mt-8" data-aos="fade-up" data-aos-delay="700">
+          <a 
+            href="#contacto" 
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-accent to-blue-600 hover:from-blue-600 hover:to-accent text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          >
+            <Icon name="mdi:phone" class="w-5 h-5" />
+            <span>Solicita una Cotización</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

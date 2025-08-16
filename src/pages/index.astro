@@ -22,11 +22,8 @@ import MantosAsfalticos from "@components/landing/MantosAsfalticos.astro";
   noindex={true}
 >
   <slot />
-  <div
-    class="bg-[url('/src/assets/images/fondos/fondo-claro-meteoro.webp')] bg-cover bg-center bg-no-repeat"
-  >
-    <Hero />
-  </div>
+
+  <Hero />
 
   <div class="bg-gradient-to-r from-[#9BAFD9] to-[#103783]">
     <div id="beneficios"></div>
@@ -34,9 +31,7 @@ import MantosAsfalticos from "@components/landing/MantosAsfalticos.astro";
     <Beneficios />
   </div>
 
-  <div>
-    <Instalacion />
-  </div>
+  <Instalacion />
 
   <div id="productos"></div>
   <div class="bg-gradient-to-r from-[#9BAFD9] to-[#103783]">
