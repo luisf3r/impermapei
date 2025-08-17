@@ -6,103 +6,203 @@ import ContactForm from "@components/ContactForm.astro";
 import WhatsAppList from "@components/WhatsAppList.astro";
 // Importación de la imagen relacionada
 import contactoImage from "@assets/images/contacto-.webp";
+
+// Información de contacto
+const contactInfo = [
+  {
+    icon: "mdi:shield-check",
+    title: "40 Años de Experiencia",
+    description:
+      "Respaldamos cada instalación con décadas de conocimiento especializado",
+  },
+  {
+    icon: "mdi:certificate",
+    title: "Técnicos Certificados",
+    description:
+      "Instaladores certificados por Mapei para garantizar máxima calidad",
+  },
+  {
+    icon: "mdi:file-document-edit",
+    title: "Garantía por Escrito",
+    description: "Cada proyecto incluye garantía por el trabajo de instalación para tu tranquilidad",
+  },
+];
+
+const horarios = [
+  { dia: "Lunes - Viernes", hora: "10:00 AM - 6:00 PM" },
+  { dia: "Sábados", hora: "10:00 AM - 2:00 PM" },
+  { dia: "Domingos", hora: "Cerrado" },
+];
 ---
 
-<footer id="contacto" class="bg-[url('/src/assets/images/fondos/fondo-gotas-izq-der.webp')] bg-cover bg-center bg-no-repeat relative overflow-hidden">
-
-  <!-- Overlay degradado sutil para mejorar legibilidad -->
-  <div class="absolute inset-0 bg-gradient-to-br from-white/70 via-white/50 to-white/30"></div>
-
-  <div class="py-12 fondo-claro relative">
-    <div
-      class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10"
-    >
-      <!-- Columna de Imagen y Formulario de Contacto -->
-      <div class="space-y-6">
-        <!-- Imagen de Contacto -->
-        <div
-          class="transition-transform duration-300 ease-in-out transform hover:scale-105"
-        >
-          <Image
-            src={contactoImage}
-            alt="Imagen de contacto"
-            class="rounded-lg w-full h-auto"
-            width={contactoImage.width}
-            height={contactoImage.height}
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 907px, 714px"
-            ,
-            densities={[1, 1.5, 2]}
-            loading="lazy"
-            data-aos="zoom-in-up"
-          />
-        </div>
-      </div>
-
-      <!-- Columna de mensaje y horarios -->
-      <div class="space-y-6" data-aos="zoom-in-up">
-        <h2 class="text-primary text-3xl font-bold leading-snug">
-          <strong class="text-accent">Habla con un Experto</strong>
-        </h2>
-        <h3 class="text-primary text-2xl font-bold">
-          Protege Tu Inversión Hoy Mismo
-        </h3>
-        <div class="w-[140px] h-[2px] bg-accent mb-2"></div>
-        <p class="text-xl text-primary">
-          Nuestros asesores técnicos están listos para analizar tu proyecto y
-          recomendarte la solución Mapei ideal. Obtén un rendimiento superior y
-          la máxima durabilidad.
-        </p>
-        <p class="text-xl text-primary">
-          <strong
-            >Llámanos y solicita tu asesoría técnica gratuita.</strong>
-        </p>
-
-        <!-- Lista de Teléfonos -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <WhatsAppList />
-          <PhoneList />
-        </div>
-      </div>
-    </div>
+<footer
+  id="contacto"
+  class="bg-[url('/src/assets/images/fondos/fondo-gotas-izq-der.webp')] bg-cover bg-center bg-no-repeat relative overflow-hidden"
+>
+  <!-- Overlay degradado mejorado -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-white/85 via-white/70 to-white/60"
+  >
   </div>
 
-  <div class="py-12">
-    <div
-      class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 mt-12"
-    >
-      <div data-aos="zoom-in-up">
-        <!-- SVG del ícono de mail -->
-        <Icon
-          name="mdi:email-edit"
-          width="42"
-          height="42"
-          title="mail icon"
-          class="pr-0"
-          class="text-accent"
-        />
-        <h3 class="text-primary text-3xl font-bold mb-6">Envía un mensaje</h3>
-        <!-- Formulario de Contacto -->
-        <ContactForm />
-      </div>
-      <div data-aos="zoom-in-up">
-        <!-- SVG del ícono de reloj -->
-        <Icon
-          name="mdi:clock-time-two"
-          width="42"
-          height="42"
-          title="clock icon"
-          class="text-accent"
-        />
-        <h3 class="font-bold text-primary text-3xl mb-6">
-          Horario de atención
-        </h3>
-        <p class="text-lg text-default">
-          Lunes a Viernes de 10am a 6pm. <br />Sábado de 10am a 2pm.
+  <!-- Sección principal de contacto -->
+  <div class="relative py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header del footer -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div
+          class="inline-flex items-center gap-2 bg-gradient-to-r from-accent to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-lg"
+        >
+          <Icon name="mdi:phone-in-talk" class="w-5 h-5" />
+          <span>Contacto Directo</span>
+        </div>
+        <h2 class="text-primary text-4xl lg:text-5xl font-bold mb-4">
+          <span class="text-accent">Habla con un</span> Experto
+        </h2>
+        <p class="text-primary/80 text-xl max-w-3xl mx-auto leading-relaxed">
+          Nuestros asesores técnicos están listos para analizar tu proyecto y
+          recomendarte la solución Mapei ideal. Obtén rendimiento superior y
+          máxima durabilidad.
         </p>
+        <div
+          class="w-24 h-1 bg-gradient-to-r from-accent to-blue-500 mx-auto mt-6"
+        >
+        </div>
+      </div>
+
+      <!-- Grid principal -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <!-- Columna izquierda: Imagen y características -->
+        <div class="space-y-8">
+          <!-- Imagen mejorada -->
+          <div class="relative group" data-aos="zoom-in-up">
+            <div
+              class="absolute -inset-4 bg-gradient-to-r from-blue-300 to-accent rounded-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-300 blur-lg"
+            >
+            </div>
+            <Image
+              src={contactoImage}
+              alt="Contacto profesional - Impermeabilizantes Mapei México"
+              class="relative rounded-2xl w-full h-auto shadow-2xl group-hover:shadow-3xl transition-all duration-500"
+              width={contactoImage.width}
+              height={contactoImage.height}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 45vw"
+              densities={[1, 1.5, 2]}
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Características destacadas -->
+          <div class="grid gap-4" data-aos="fade-up" data-aos-delay="200">
+            {
+              contactInfo.map((info, index) => (
+                <div class="flex items-start gap-4 p-4 bg-white/60 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                  <div class="flex-shrink-0">
+                    <Icon name={info.icon} class="text-accent text-2xl" />
+                  </div>
+                  <div>
+                    <h4 class="text-primary font-semibold text-lg mb-1">
+                      {info.title}
+                    </h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                      {info.description}
+                    </p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Columna derecha: Contacto y formulario -->
+        <div class="space-y-8">
+          <!-- Información de contacto directo -->
+          <div
+            class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <Icon name="mdi:phone-ring" class="text-accent text-3xl" />
+              <h3 class="text-primary text-2xl font-bold">Llamada Directa</h3>
+            </div>
+            <p class="text-primary mb-6">
+              <strong>Solicita tu asesoría técnica gratuita ahora mismo</strong>
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <WhatsAppList />
+              <PhoneList />
+            </div>
+          </div>
+
+          <!-- Formulario de contacto -->
+          <div
+            class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <Icon name="mdi:email-edit" class="text-accent text-3xl" />
+              <h3 class="text-primary text-2xl font-bold">Envía un Mensaje</h3>
+            </div>
+            <ContactForm />
+          </div>
+
+          <!-- Horarios de atención -->
+          <div
+            class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <Icon name="mdi:clock-time-four" class="text-accent text-3xl" />
+              <h3 class="text-primary text-2xl font-bold">
+                Horarios de Atención
+              </h3>
+            </div>
+            <div class="space-y-3">
+              {
+                horarios.map((horario) => (
+                  <div class="flex justify-between items-center py-2 border-b border-gray-200 last:border-0">
+                    <span class="text-primary font-medium">{horario.dia}</span>
+                    <span class="text-gray-600 font-semibold">
+                      {horario.hora}
+                    </span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA final -->
+      <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="600">
+        <div
+          class="bg-gradient-to-r from-accent to-blue-600 rounded-2xl p-8 text-white shadow-2xl"
+        >
+          <h3 class="text-2xl lg:text-3xl font-bold mb-4">
+            ¿Listo para Proteger tu Inversión?
+          </h3>
+          <p class="text-lg mb-6 opacity-90">
+            Obtén una cotización personalizada y descubre por qué somos la
+            opción preferida de constructores y arquitectos en México.
+          </p>
+          <a
+            href="https://wa.me/5213310793173?text=Hola,%20visite%20www.impermeabilizantesmapei.com%20y%20me%20interesa%20recibir%20más%20información"
+            class="inline-flex items-center gap-2 bg-white text-accent px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            target="_blank"
+            rel="nofollow"
+          >
+            <Icon name="mdi:whatsapp" class="w-6 h-6" />
+            <span>Solicitar Cotización WhatsApp</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </footer>
+<!-- Botón flotante de WhatsApp mejorado -->
 <a
   href="https://wa.me/5213310793173?text=Hola,%20visite%20www.impermeabilizantesmapei.com%20y%20me%20interesa%20recibir%20más%20información"
   class="btn-whatsapp-pulse btn-whatsapp-pulse-border"
