@@ -156,7 +156,7 @@ pnpm dev
 ## 📞 Información de Contacto
 
 ### Impermapei
-- **Sitio web**: [impermapei.w365.uno](https://www.impermapei.w365.uno)
+- **Sitio web**: [impermeabilizantesmapei.com](https://www.impermeabilizantesmapei.com)
 - **WhatsApp**: +52 33 1079 3173 / +52 55 6037 0930
 - **Teléfonos**: 33-3615-1421 / (800) 8909-363
 - **Horario**: Lunes a Viernes 10am-6pm, Sábado 10am-2pm
