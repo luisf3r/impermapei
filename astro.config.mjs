@@ -9,6 +9,15 @@ import { fileURLToPath } from 'url';
 export default defineConfig({
   output: 'static', // Asegúrate de que la salida sea estática
   site: 'https://www.impermeabilizantesmapei.com/',
+  
+  // Minifica el HTML eliminando espacios innecesarios
+  compressHTML: true,
+  
+  // Cambia la carpeta de assets de /_astro/ a /assets/
+  build: {
+    assets: 'assets',
+  },
+  
   integrations: [tailwind(), icon(), sitemap({
     filter: (page) =>
       page !== '/gracias/' &&

@@ -4,18 +4,19 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && node scripts/clean-astro-attrs.mjs",
+    "build:clean": "node scripts/clean-astro-attrs.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/sitemap": "^3.4.2",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/sitemap": "^3.6.0",
     "@astrojs/tailwind": "^6.0.2",
     "@fontsource-variable/open-sans": "^5.1.1",
     "@fontsource-variable/public-sans": "^5.2.6",
     "aos": "^2.3.4",
-    "astro": "5.12.9",
+    "astro": "5.16.2",
     "astro-icon": "^1.1.1",
     "astro-seo": "^0.8.4",
     "image-size": "^2.0.1",
