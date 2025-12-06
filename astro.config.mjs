@@ -20,8 +20,8 @@ export default defineConfig({
   
   integrations: [tailwind(), icon(), sitemap({
     filter: (page) =>
-      page !== '/gracias/' &&
-      page !== '/404/',
+      !page.includes('/gracias/') &&
+      !page.includes('/404/'),
   })],
   vite: {
     resolve: {
